@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Drone Calculator</string>
+    <string name="app_name">Калькулятор висот</string>
+    <string name="clear">Очистити</string>
+    <string name="clear_height_distance">Очистити відстань і висоту</string>
+    <string name="calculate">Розрахувати</string>
+    <string name="angle">Кут</string>
+    <string name="distance">Відстань</string>
+    <string name="height">Висота</string>
+    <string name="error_angle_empty">Введи значення</string>
+    <string name="error_distance_empty">Введи значення</string>
+    <string name="error_height_empty">Введи значення</string>
 </resources>

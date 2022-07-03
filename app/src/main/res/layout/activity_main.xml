@@ -5,14 +5,167 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        >
+
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculateButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            />
+
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            />
+
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/clear_height_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearWidthHeightButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
+            />
+
     <TextView
+            android:text="@string/angle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/angleTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heightEdit"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/angleEdit"
+            app:layout_constraintTop_toBottomOf="@+id/angleTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/angleClearButton"
+            android:layout_marginEnd="8dp"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck"
+            android:importantForAutofill="no"/>
+
+    <ImageButton
+            android:id="@+id/angleClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/angleEdit"
+            app:layout_constraintTop_toTopOf="@+id/angleEdit"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@android:drawable/ic_delete"/>
+
+    <TextView
+            android:text="@string/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distanceTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/distanceEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/distanceClearButton"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/distanceTitle"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck"
+            android:importantForAutofill="no"/>
+
+    <ImageButton
+            android:id="@+id/distanceClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/distanceEdit"
+            app:layout_constraintTop_toTopOf="@+id/distanceEdit"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@android:drawable/ic_delete"
+            />
+
+    <TextView
+            android:text="@string/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightTitle"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/distanceEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/heightEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/heightClearButton"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/heightTitle"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck"
+            android:minHeight="48dp"
+            android:importantForAutofill="no"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/heightClearButton"
+            app:layout_constraintTop_toTopOf="@+id/heightEdit"
+            app:layout_constraintBottom_toBottomOf="@+id/heightEdit"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@android:drawable/ic_delete"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
